@@ -108,9 +108,9 @@ return [
 
     'options' => [
 
-        'softDelete' => true,
+        'softDelete' => false,
 
-        'tables_searchable_default' => false,
+        'tables_searchable_default' => true,
     ],
 
     /*
@@ -142,15 +142,15 @@ return [
 
         'swagger'       => false,
 
-        'tests'         => true,
+        'tests'         => false,
 
-        'datatables'    => false,
+        'datatables'    => true,
 
         'menu'          => [
 
             'enabled'       => true,
 
-            'menu_file'     => 'layouts/menu.blade.php',
+            'menu_file'     => 'vendor/adminlte/layouts/menu.blade.php',
         ],
     ],
 
