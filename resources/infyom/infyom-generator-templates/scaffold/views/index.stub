@@ -1,0 +1,30 @@
+@extends('layouts.app')
+@section('titulo_cabecera') Lista de $MODEL_NAME_PLURAL$ @endsection
+@section('contentheader_title') @endsection
+@section('main-content')
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title" style="padding-top: 7px; text-transform: capitalize;">Listado de $MODEL_NAME_PLURAL$.</h3>
+          <div class="pull-right">
+                <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}" class="btn btn-small btn-success" role="button" style="text-transform: capitalize">
+                <span class="glyphicon glyphicon-plus"> </span> Nuevo $MODEL_NAME$
+                </a>
+          </div>
+        </div>
+        <div class="box-body">
+            @include('mensajes')
+            @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.table')
+        </div><!-- /.box-body -->
+      </div>
+    </div>
+  </div>
+</div>
+@endsection
+@section('js')
+<script>
+    function elimina(e){event.preventDefault(),swal({title:"¿Está seguro de que desea eliminar el registro?",text:"Este proceso no se puede reversar",type:"warning",confirmButtonColor:"#d9534f",confirmButtonText:"Si, eliminar el registro!",showCancelButton:!0,cancelButtonText:"No, cancelar!"}).then(function(){$("#"+e).submit()})}
+</script>
+@endsection

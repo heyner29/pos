@@ -171,6 +171,8 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Styde\Html\HtmlServiceProvider::class,
         //
 
         /*
@@ -233,6 +235,8 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Datatables'=> Yajra\Datatables\Facades\Datatables::class,
+        'Access' => Styde\Html\Facades\Access::class,
     ],
 
 ];

@@ -7,9 +7,6 @@ class $MODEL_NAME$ApiTest extends TestCase
 {
     use Make$MODEL_NAME$Trait, ApiTestTrait, WithoutMiddleware, DatabaseTransactions;
 
-    /**
-     * @test
-     */
     public function testCreate$MODEL_NAME$()
     {
         $$MODEL_NAME_CAMEL$ = $this->fake$MODEL_NAME$Data();
@@ -18,9 +15,6 @@ class $MODEL_NAME$ApiTest extends TestCase
         $this->assertApiResponse($$MODEL_NAME_CAMEL$);
     }
 
-    /**
-     * @test
-     */
     public function testRead$MODEL_NAME$()
     {
         $$MODEL_NAME_CAMEL$ = $this->make$MODEL_NAME$();
@@ -29,9 +23,6 @@ class $MODEL_NAME$ApiTest extends TestCase
         $this->assertApiResponse($$MODEL_NAME_CAMEL$->toArray());
     }
 
-    /**
-     * @test
-     */
     public function testUpdate$MODEL_NAME$()
     {
         $$MODEL_NAME_CAMEL$ = $this->make$MODEL_NAME$();
@@ -42,9 +33,6 @@ class $MODEL_NAME$ApiTest extends TestCase
         $this->assertApiResponse($edited$MODEL_NAME$);
     }
 
-    /**
-     * @test
-     */
     public function testDelete$MODEL_NAME$()
     {
         $$MODEL_NAME_CAMEL$ = $this->make$MODEL_NAME$();

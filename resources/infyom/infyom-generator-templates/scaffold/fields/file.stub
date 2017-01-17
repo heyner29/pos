@@ -1,0 +1,4 @@
+<!-- Campo tipo File para $FIELD_NAME_TITLE$ -->
+{!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
+<input id="avatar" name="avatar" type="file" class="file" multiple data-show-upload="false" data-show-caption="true" data-allowed-file-extensions='["jpg", "png"]'>
+<div class="clearfix"></div>

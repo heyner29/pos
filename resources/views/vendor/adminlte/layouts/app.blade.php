@@ -14,7 +14,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
+        {!! Alert::render() !!}
         @include('adminlte::layouts.partials.contentheader')
 
         <!-- Main content -->

@@ -1,0 +1,2 @@
+<!-- Campo tipo email para $FIELD_NAME_TITLE$ -->
+{!! Field::email('$FIELD_NAME$', ['ph' => '$FIELD_NAME_TITLE$ :', 'label' => '$FIELD_NAME_TITLE$']) !!}

@@ -1,0 +1,2 @@
+<!-- Campo de texto para $FIELD_NAME_TITLE$ -->
+{!! Field::text('$FIELD_NAME$', ['ph' => '$FIELD_NAME_TITLE$ :', 'label' => '$FIELD_NAME_TITLE$']) !!}

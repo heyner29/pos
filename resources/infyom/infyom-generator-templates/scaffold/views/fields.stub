@@ -1,0 +1,16 @@
+$FIELDS$
+</div>
+<!-- Campos de envio y cancelacion -->
+<div class="box-footer">
+	<div class="form-group col-md-12">
+		<center>
+			<button type="submit" class="btn btn-app btn-primary">
+				<i class="fa fa-save"></i>
+				Guardar
+			</button>
+			<a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') !!}" class="btn btn-app btn-warning">
+				<i class="fa fa-remove"></i>
+				Cancelar
+			</a>
+		</center>
+	</div>

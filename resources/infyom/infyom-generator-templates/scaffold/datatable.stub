@@ -9,9 +9,6 @@ use Yajra\Datatables\Services\DataTable;
 class $MODEL_NAME$DataTable extends DataTable
 {
 
-    /**
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function ajax()
     {
         return $this->datatables
@@ -20,11 +17,6 @@ class $MODEL_NAME$DataTable extends DataTable
             ->make(true);
     }
 
-    /**
-     * Get the query object to be processed by datatables.
-     *
-     * @return \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder
-     */
     public function query()
     {
         $$MODEL_NAME_PLURAL_CAMEL$ = $MODEL_NAME$::query();
@@ -32,11 +24,6 @@ class $MODEL_NAME$DataTable extends DataTable
         return $this->applyScopes($$MODEL_NAME_PLURAL_CAMEL$);
     }
 
-    /**
-     * Optional method if you want to use html builder.
-     *
-     * @return \Yajra\Datatables\Html\Builder
-     */
     public function html()
     {
         return $this->builder()
@@ -44,8 +31,10 @@ class $MODEL_NAME$DataTable extends DataTable
             ->addAction(['width' => '10%'])
             ->ajax('')
             ->parameters([
-                'dom' => 'Bfrtip',
+                'dom' => '<\'row\'<\'col-md-4\'B><\'col-md-4\'l><\'col-md-4\'f>>" + "<\'row\'<\'col-md-12\'t>><\'box-footer\'<\'col-md-6\'i><\'col-md-6\'p>>',
                 'scrollX' => false,
+                'autoWidth'=> false,
+                'language' => ["url"=> "//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json"],
                 'buttons' => [
                     'print',
                     'reset',
@@ -64,11 +53,6 @@ class $MODEL_NAME$DataTable extends DataTable
             ]);
     }
 
-    /**
-     * Get columns.
-     *
-     * @return array
-     */
     private function getColumns()
     {
         return [
@@ -76,11 +60,6 @@ class $MODEL_NAME$DataTable extends DataTable
         ];
     }
 
-    /**
-     * Get filename for export.
-     *
-     * @return string
-     */
     protected function filename()
     {
         return '$MODEL_NAME_PLURAL_CAMEL$';
