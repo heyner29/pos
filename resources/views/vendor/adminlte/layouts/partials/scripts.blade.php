@@ -12,5 +12,5 @@
         'csrfToken' => csrf_token(),
     ]) !!};
 </script>
-
+@yield('scriptDatatable')
 @yield('jsapp')

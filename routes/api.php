@@ -24,3 +24,11 @@ Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
     #adminlte_api_routes
 });
 
+
+
+
+
+
+
+
+
