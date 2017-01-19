@@ -36,19 +36,30 @@ class $MODEL_NAME$DataTable extends DataTable
                 'autoWidth'=> false,
                 'language' => ["url"=> "//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json"],
                 'buttons' => [
-                    'print',
-                    'reset',
-                    'reload',
+                    [
+                                            'extend'      => 'print',
+                                            'text'        => "<i class='glyphicon glyphicon-print'></i>",
+                                            'titleAttr'   => 'Imprimir'
+                    ],
+                    [
+                                            'extend'      => 'reload',
+                                            'text'        => "<i class='fa fa-refresh'></i>",
+                                            'titleAttr'   => 'Recargar'
+                    ],
                     [
                          'extend'  => 'collection',
-                         'text'    => '<i class="fa fa-download"></i> Export',
+                         'text'    => '<i class="fa fa-download"></i> Exportar',
                          'buttons' => [
                              'csv',
                              'excel',
                              'pdf',
                          ],
                     ],
-                    'colvis'
+                    [
+                                            'extend'      => 'colvis',
+                                            'text'        => "<i class='glyphicon glyphicon-eye-open'></i>",
+                                            'titleAttr'   => 'Ver'
+                    ]
                 ]
             ]);
     }

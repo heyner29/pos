@@ -9,7 +9,7 @@
         <div class="box-header with-border">
           <h3 class="box-title" style="padding-top: 7px; text-transform: capitalize;">Listado de $MODEL_NAME_PLURAL$.</h3>
           <div class="pull-right">
-                <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}" class="btn btn-primary" style="margin-top: -10px;margin-bottom: 5px;text-transform: capitalize">
+                <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}" class="btn btn-success" style="text-transform: capitalize">
                     <span class="glyphicon glyphicon-plus"> </span> Nuevo $MODEL_NAME$
                 </a>
           </div>
